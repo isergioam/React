@@ -9,9 +9,20 @@ const lugar = 'Centro Público de FPE Remedios Rojo'
 const duracion = '300 horas'
 const plazas = 15
 
+import Banner from './components/Banner.jsx'
+import DescripcionEvento from './components/DescripcionEvento.jsx'
+import PiePagina from './components/PiePagina.jsx'
+
 export default function App() {
   return (
     <main>
+
+      <Banner />
+      <br />
+
+      <DescripcionEvento />
+      <br />
+
       <h1 className='destacado'>{titulo}</h1>
       <p>Unidades: {unidades} </p>
       <p>Precio por unidad: {precioUnidad} €</p>
@@ -24,8 +35,10 @@ export default function App() {
       <p>Plazas: {plazas}</p>
       <br />
       <img className='img-lorem' src={imgLorem} alt="Lorem Picsum" />
+      <br />
+      <br />
 
-
+      <PiePagina />
     </main>
   )
 }
