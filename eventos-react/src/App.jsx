@@ -1,3 +1,5 @@
+import BotonAccion from "./components/BotonAccion"
+
 export default function App() {
   function saludar() {
     alert('Hola, React')
@@ -20,6 +22,11 @@ export default function App() {
 
   return (
     <main>
+      <h1>Envio de mensajes</h1>
+      <BotonAccion txt="Enviar mensaje" msj="Hola, Mundo" />
+      <br />
+      <br />
+      <hr />
       <br />
       <h1>Eventos básicos</h1>
       <button onClick={saludar}>Saludar</button>
