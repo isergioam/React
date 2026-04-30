@@ -1,5 +1,7 @@
 import Contador from "./components/Contador"
 import Mensajes from "./components/Mensajes"
+import InputControlado from "./components/InputControlado"
+import Boolean from "./components/Boolean"
 import './App.css'
 
 function App() {
@@ -12,6 +14,14 @@ function App() {
       <hr />
 
       <Mensajes />
+
+      <hr />
+
+      <InputControlado />
+
+      <hr />
+
+      <Boolean />
     </main>
   )
 }

@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 function Mensajes() {
-    const [msj, setMsj] = useState("Hola que ase?")
+    const [msj, setMsj] = useState("")
     return (
         <div>
             <br />
