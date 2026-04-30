@@ -112,6 +112,10 @@ button:hover {
   background: #8a2be2;
 }
 
+ul {
+  list-style: none;
+}
+
 code,
 .counter {
   font-family: var(--mono);
