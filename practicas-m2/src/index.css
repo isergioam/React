@@ -85,6 +85,7 @@ h1 {
 }
 
 h2 {
+
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
@@ -129,4 +130,46 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+.tarjeta-perfil {
+  width: 35%;
+  height: 300px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: rgb(211, 121, 85);
+  padding: 10px 20px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjeta-perfil p {
+  margin: 50px;
+  color: var(--text-h);
+}
+
+@keyframes rotarInfinito {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+hr {
+  animation: rotarInfinito 1s linear infinite;
+  display: inline-block;
 }

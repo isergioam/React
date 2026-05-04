@@ -8,6 +8,8 @@ import ObtenerEstadoRobot from "./components/ObtenerEstadoRobot"
 import SalaGamer from "./components/SalaGamer"
 import Superheroe from "./components/Superheroe"
 import EditorNombre from "./components/EditorNombre"
+import TarjetaPerfil from "./components/TarjetaPerfil"
+import Mochila from "./components/Mochila"
 import './App.css'
 
 function App() {
@@ -15,7 +17,7 @@ function App() {
   return (
     <main>
 
-      <EditorNombre />
+      <Mochila />
 
     </main>
   )
