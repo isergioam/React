@@ -1,32 +1,36 @@
 import { useState } from "react"
 
 function ObtenerEstadoRobot() {
-    const [jugadores, setJugadores] = useState(0)
-    const aforoMaximo = 8
+    const [energia, setEnergia] = useState(50)
 
-    function entrarJugador() {
-        setJugadores(valorAnterior => Math.min(valorAnterior + 1, aforoMaximo))
+    function subirEnergia() {
+        setEnergia(valorAnterior => Math.min(valorAnterior + 10, 100))
     }
 
-    function salirJugador() {
-        setJugadores(valorAnterior => Math.max(valorAnterior - 1, 0))
+    function bajarEnergia() {
+        setEnergia(valorAnterior => Math.max(valorAnterior - 10, 0))
     }
 
-    function vaciarSala() {
-        setJugadores(0)
+    function recargar() {
+        setEnergia(100)
+    }
+
+    function obtenerEstadoRobot() {
+        if (energia === 0) return 'Robot apagado'
+        if (energia <= 30) return 'Energía crítica'
+        if (energia <= 70) return 'Funcionamiento normal'
+        return 'Robot en plena forma'
     }
 
     return (
         <main>
-            <h1>Sala gamer</h1>
-            <p>Jugadores dentro: {jugadores}</p>
+            <h1>Simulador de energía de un robot</h1>
+            <p>Energía actual: {energia}</p>
+            <p>Estado: {obtenerEstadoRobot()}</p>
 
-            {jugadores === 0 && <p>Sala vacía</p>}
-            {jugadores === aforoMaximo && <p>Sala completa</p>}
-
-            <button onClick={entrarJugador}>Entrar jugador</button>
-            <button onClick={salirJugador}>Salir jugador</button>
-            <button onClick={vaciarSala}>Vaciar sala</button>
+            <button onClick={subirEnergia}>+10 energía</button>
+            <button onClick={bajarEnergia}>-10 energía</button>
+            <button onClick={recargar}>Recargar al 100</button>
         </main>
     )
 }
