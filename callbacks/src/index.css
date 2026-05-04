@@ -89,7 +89,7 @@ h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
-  margin: 0 0 8px;
+  margin: 20px;
 
   @media (max-width: 1024px) {
     font-size: 20px;
@@ -109,9 +109,10 @@ button {
   cursor: pointer;
 }
 
+/*
 button:hover {
   background: #8a2be2;
-}
+}*/
 
 ul {
   list-style: none;
@@ -132,44 +133,15 @@ code {
   background: var(--code-bg);
 }
 
-input {
-  border-radius: 5px;
-  border: 1px solid var(--border);
-  background: var(--bg);
-  padding: 10px 20px;
-  margin: 5px;
+.btn-mañana:hover {
+  background-color: beige;
+  color: black;
 }
 
-.tarjeta-perfil {
-  width: 35%;
-  height: 300px;
-  border-radius: 5px;
-  border: 1px solid var(--border);
-  background: rgb(211, 121, 85);
-  padding: 10px 20px;
-  margin: 40px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.btn-tarde:hover {
+  background-color: orange;
 }
 
-.tarjeta-perfil p {
-  margin: 50px;
-  color: var(--text-h);
+.btn-noche:hover {
+  background-color: purple;
 }
-
-@keyframes rotarInfinito {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/*hr {
-  animation: rotarInfinito 1s linear infinite;
-  display: inline-block;
-}*/
