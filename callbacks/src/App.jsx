@@ -7,7 +7,7 @@ function App() {
 
   return (
     <main>
-      <SelectorTurno onselect={setTurno} />
+      <SelectorTurno onSelect={setTurno} />
       {turno === 'mañana' && <h1 style={{ color: 'beige' }}>Turno de {turno}</h1>}
       {turno === 'tarde' && <h1 style={{ color: 'orange' }}>Turno de {turno}</h1>}
       {turno === 'noche' && <h1 style={{ color: 'purple' }}>Turno de {turno}</h1>}
