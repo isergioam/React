@@ -5,6 +5,9 @@ import Boolean from "./components/Boolean"
 import FichaJugador from "./components/FichaJugador"
 import GestorTareas from "./components/GestorTareas"
 import ObtenerEstadoRobot from "./components/ObtenerEstadoRobot"
+import SalaGamer from "./components/SalaGamer"
+import Superheroe from "./components/Superheroe"
+import EditorNombre from "./components/EditorNombre"
 import './App.css'
 
 function App() {
@@ -12,7 +15,7 @@ function App() {
   return (
     <main>
 
-      <ObtenerEstadoRobot />
+      <EditorNombre />
 
     </main>
   )
