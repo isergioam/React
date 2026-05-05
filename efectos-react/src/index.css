@@ -52,6 +52,7 @@
 
 body {
   margin: 0;
+  background-color: antiquewhite;
 }
 
 #root {
@@ -127,5 +128,76 @@ button {
 
 button:hover {
   background-color: var(--accent);
+  color: white;
+}
+
+.container {
+  background-color: var(--bg);
+  width: 80%;
+  margin: 10px auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid rgb(255, 65, 65);
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding-inline: 16px;
+  padding-top: 10px;
+}
+
+header h1 {
+  margin: 10px auto 30px;
+  text-align: left;
+  font-size: 30px;
+  padding-inline-start: 16px;
+  margin-inline-start: 34px;
+}
+
+.comentario-contador {
+  background-color: red;
+  color: var(--text-h);
+  font-weight: 500;
+  font-family: var(--mono);
+  margin-inline-end: 0.5rem;
+  font-size: 40px;
+}
+
+.comentario-titulo {
+  color: var(--text-h);
+  font-weight: 500;
+  font-family: var(--mono);
+  font-size: 26px;
+  margin-inline-start: 20px;
+
+}
+
+.comentario-email {
+  color: rgb(104, 209, 241);
+  font-weight: 500;
+  font-family: var(--mono);
+  font-size: 14px;
+  margin-block-start: 10px;
+}
+
+.comentario-body {
+  color: var(--text);
+  font-weight: 500;
+  font-family: var(--mono);
+  font-size: 16px;
+}
+
+article {
+  width: 90%;
+  padding: 16px;
+  margin: 10px auto;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+article:hover {
+  background-color: var(--accent-bg);
+  border-color: var(--accent-border);
   color: white;
 }
