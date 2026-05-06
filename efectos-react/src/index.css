@@ -52,7 +52,7 @@
 
 body {
   margin: 0;
-  background-color: antiquewhite;
+  /*background-color: antiquewhite;*/
 }
 
 #root {
@@ -200,4 +200,8 @@ article:hover {
   background-color: var(--accent-bg);
   border-color: var(--accent-border);
   color: white;
+}
+
+ul {
+  list-style: none;
 }
