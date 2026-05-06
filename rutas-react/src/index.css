@@ -216,3 +216,88 @@ article>a {
   justify-content: center;
   align-items: center;
 }
+
+button {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(170, 88, 247);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-out;
+}
+
+input {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgba(170, 88, 247, 0.473);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+select {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgba(170, 88, 247, 0.473);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+/*
+label {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(170, 88, 247);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}*/
+
+ul {
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgba(170, 88, 247, 0.473);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+li {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(170, 88, 247);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}

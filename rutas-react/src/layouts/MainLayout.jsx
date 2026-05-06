@@ -4,7 +4,7 @@ function MainLayout() {
     return (
         <>
             <header>
-                <h1>Biblioteca 📖</h1>
+                <h1>Ejercicios Prácticos 📖</h1>
 
                 <nav>
                     <NavLink
@@ -12,13 +12,6 @@ function MainLayout() {
                         className={({ isActive }) => (isActive ? 'fondo' : undefined)}
                     >
                         Inicio
-                    </NavLink>
-
-                    <NavLink
-                        to="/libros"
-                        className={({ isActive }) => (isActive ? 'fondo' : undefined)}
-                    >
-                        Libros
                     </NavLink>
 
                     <NavLink
@@ -41,6 +34,13 @@ function MainLayout() {
                         className={({ isActive }) => (isActive ? 'fondo' : undefined)}
                     >
                         Servicios
+                    </NavLink>
+
+                    <NavLink
+                        to="/busqueda-libros"
+                        className={({ isActive }) => (isActive ? 'fondo' : undefined)}
+                    >
+                        Busqueda Libros
                     </NavLink>
                 </nav>
             </header>
