@@ -71,26 +71,36 @@ h2 {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
+
 }
 
 h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
+
   @media (max-width: 1024px) {
     font-size: 36px;
     margin: 20px 0;
   }
 }
+
+h1:first-child:hover::after {
+  content: " HOLA";
+  animation: girar 2s linear infinite;
+}
+
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
@@ -108,4 +118,186 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 10px;
+}
+
+nav {
+  padding: 20px;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.active {
+  color: var(--accent-border);
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.fondo {
+  background-color: rgb(81, 20, 131);
+  border-end-end-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom: 5px solid rgb(0, 255, 76);
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.2s ease-out;
+}
+
+.fondo::after {
+  content: " ㋡";
+}
+
+.fondo:hover {
+  color: rgb(238, 238, 238);
+  font-weight: bolder;
+  font-size: 22px;
+
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header,
+section {
+  border: 1px solid yellow;
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article {
+  border: 1px solid rgb(255, 255, 255);
+  width: 60%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: rgba(170, 88, 247, 0.473);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+article:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-out;
+}
+
+article>a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(170, 88, 247);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-out;
+}
+
+input {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgba(170, 88, 247, 0.473);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+select {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgba(170, 88, 247, 0.473);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+/*
+label {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(170, 88, 247);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}*/
+
+ul {
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgba(170, 88, 247, 0.473);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+li {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(170, 88, 247);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
 }
