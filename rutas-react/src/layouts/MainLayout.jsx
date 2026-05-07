@@ -13,7 +13,12 @@ function MainLayout() {
                     >
                         Inicio
                     </NavLink>
-
+                    <NavLink
+                        to="/panel"
+                        className={({ isActive }) => (isActive ? 'fondo' : undefined)}
+                    >
+                        Panel de Navegación
+                    </NavLink>
                     <NavLink
                         to="/contacto"
                         className={({ isActive }) => (isActive ? 'fondo' : undefined)}
@@ -21,26 +26,36 @@ function MainLayout() {
                         Contacto
                     </NavLink>
 
-
                     <NavLink
-                        to="/ayuda"
+                        to="/registro"
                         className={({ isActive }) => (isActive ? 'fondo' : undefined)}
                     >
-                        Ayuda
+                        Registro
+                    </NavLink>
+                    <NavLink
+                        to="/reserva"
+                        className={({ isActive }) => (isActive ? 'fondo' : undefined)}
+                    >
+                        Reserva
+                    </NavLink>
+                    <NavLink
+                        to="/buscar"
+                        className={({ isActive }) => (isActive ? 'fondo' : undefined)}
+                    >
+                        Buscar
+                    </NavLink>
+                    <NavLink
+                        to="/editar-producto"
+                        className={({ isActive }) => (isActive ? 'fondo' : undefined)}
+                    >
+                        Editar Producto
                     </NavLink>
 
                     <NavLink
-                        to="/servicios"
+                        to="/login"
                         className={({ isActive }) => (isActive ? 'fondo' : undefined)}
                     >
-                        Servicios
-                    </NavLink>
-
-                    <NavLink
-                        to="/busqueda-libros"
-                        className={({ isActive }) => (isActive ? 'fondo' : undefined)}
-                    >
-                        Busqueda Libros
+                        Login
                     </NavLink>
                 </nav>
             </header>
