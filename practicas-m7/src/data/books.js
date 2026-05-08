@@ -1,0 +1,42 @@
+export const BOOKS = [
+    {
+        id: 'book-1',
+        titulo: 'React paso a paso',
+        autor: 'Ana Ruiz',
+        categoria: 'frontend',
+        paginas: 240,
+        descripcion: 'Una introducción práctica a React basada en componentes.',
+    },
+    {
+        id: 'book-2',
+        titulo: 'JavaScript moderno',
+        autor: 'Luis Mora',
+        categoria: 'javascript',
+        paginas: 310,
+        descripcion: 'Conceptos esenciales de JavaScript para desarrollo web actual.',
+    },
+    {
+        id: 'book-3',
+        titulo: 'CSS práctico',
+        autor: 'Marta Sol',
+        categoria: 'diseño',
+        paginas: 180,
+        descripcion: 'Guía visual para crear interfaces limpias y mantenibles.',
+    },
+    {
+        id: 'book-4',
+        titulo: 'Node desde cero',
+        autor: 'Carlos Vega',
+        categoria: 'backend',
+        paginas: 295,
+        descripcion: 'Primeros pasos para crear servidores con Node.js.',
+    },
+    {
+        id: 'book-5',
+        titulo: 'Arquitectura frontend',
+        autor: 'Laura Gil',
+        categoria: 'frontend',
+        paginas: 360,
+        descripcion: 'Organización de proyectos, componentes y escalabilidad.',
+    },
+]
