@@ -109,3 +109,158 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* =========================================
+   Layout & Componentes (CV)
+   ========================================= */
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  width: 100%;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header & NavBar */
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  box-sizing: border-box;
+  width: 100%;
+  gap: 1rem;
+}
+
+.app-header__title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.app-header__eyebrow {
+  margin: 0.2rem 0 0 0;
+  color: var(--text);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.navbar__link {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  border-radius: 0; /* Sin redondeos, esquinas rectas */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.navbar__link:hover,
+.navbar__link.active {
+  color: var(--text-h);
+  border-color: var(--border);
+  background: rgba(255, 255, 255, 0.05); /* Acorde a la tabla de habilidades */
+}
+
+/* Footer */
+.app-footer {
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.app-footer__text {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   Componente: CV Timeline
+   ========================================= */
+
+.cv-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 2rem auto;
+  border-left: 2px solid var(--border);
+  max-width: 800px;
+}
+
+.cv-timeline__item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.cv-timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.cv-timeline__item::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background: var(--bg);
+  border: 2px solid var(--text-h);
+  border-radius: 0; /* Sin redondeos, esquinas rectas */
+  box-sizing: border-box;
+}
+
+.cv-timeline__time {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--text-h);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cv-timeline__title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.cv-timeline__subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text);
+  opacity: 0.8;
+}
