@@ -80,7 +80,7 @@
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .recipe-card__title {
@@ -142,21 +142,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    padding: 0.8rem 1rem;
-    border-radius: 0;
+    padding: 1rem;
+    margin: 0 -1.5rem -1.5rem -1.5rem;
     background: linear-gradient(135deg, var(--primary), #d97706);
     color: white;
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);
 }
 
 .recipe-card__link:hover {
     filter: brightness(1.1);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
 }
 
 .recipe-card__topline {
@@ -176,7 +175,7 @@
     background: #facc15;
     padding: 0.3rem 0.6rem;
     border-radius: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilos para el botón de favoritos */
