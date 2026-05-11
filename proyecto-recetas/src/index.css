@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
+
 :root {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #1f2937;
-  background-color: #f8fafc;
+  --bg-color: #0b0f19;
+  --surface-color: #1a2235;
+  --surface-hover: #232d45;
+  --primary: #f97316;
+  --primary-hover: #ea580c;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --glow: 0 0 20px rgba(249, 115, 22, 0.3);
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-color);
+  scroll-behavior: smooth;
 }
 
 * {
@@ -11,94 +24,242 @@
 body {
   margin: 0;
   min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(249, 115, 22, 0.05), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.05), transparent 25%);
+  background-attachment: fixed;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
-button,
-input,
-select,
-textarea {
+button, input, select, textarea {
   font: inherit;
+  transition: all 0.3s ease;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Main Shell */
 .app-shell {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Header Glassmorphism */
 .app-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
-  background-color: #ffffff;
+  padding: 1rem 3rem;
+  background: rgba(11, 15, 25, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 .app-header__eyebrow {
   margin: 0;
-  color: #64748b;
-  font-size: 0.8rem;
+  color: var(--primary);
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .app-header__title {
   margin: 0;
-  color: #111827;
-  font-size: 1.6rem;
+  color: var(--text-main);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--primary) 0%, #facc15 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* Navigation */
 .navbar {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
 .navbar__link {
-  padding: 0.5rem 0.8rem;
-  border-radius: 999px;
-  color: #334155;
-  font-weight: 700;
-  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0;
+  color: var(--text-muted);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .navbar__link:hover {
-  background-color: #f1f5f9;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .navbar__link.active {
-  background-color: #dbeafe;
-  color: #1d4ed8;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), #d97706);
+  box-shadow: var(--glow);
 }
 
+/* Main Content */
 .app-main {
-  max-width: 1100px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 3rem 1.5rem;
+  flex: 1;
 }
 
+/* Sections */
 .page-section {
-  padding: 1.5rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 1rem;
-  background-color: #ffffff;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  background: linear-gradient(145deg, rgba(26, 34, 53, 0.6), rgba(11, 15, 25, 0.4));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .page-section h1 {
   margin-top: 0;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
 }
 
 .page-section p {
-  color: #4b5563;
-  line-height: 1.6;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 1.1rem;
 }
 
 .text-link {
-  color: #1d4ed8;
+  color: var(--primary);
   font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.text-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.text-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Common form elements used in recipes */
+input[type="search"], select {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 1rem 1.5rem;
+  border-radius: 0;
+  outline: none;
+  font-size: 1rem;
+}
+
+input[type="search"]:focus, select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+/* Recipes Layout additions (toolbar, grids) */
+.recipes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.recipes-total {
+  background: var(--surface-hover);
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  font-weight: 700;
+  color: var(--primary);
+  border: 1px solid var(--border-color);
+}
+
+.recipes-toolbar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.recipes-toolbar input {
+  flex: 1;
+  min-width: 250px;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 0;
+  border: 1px dashed var(--border-color);
+  font-size: 1.2rem !important;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .recipes-toolbar {
+    flex-direction: column;
+  }
+  .recipes-grid {
+    grid-template-columns: 1fr;
+  }
 }

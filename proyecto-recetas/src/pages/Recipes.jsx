@@ -55,7 +55,7 @@ function Recipes() {
             <div className="recipes-toolbar">
                 <input
                     type="search"
-                    placeholder="Buscar por nombre, tipo o descripción"
+                    placeholder="Buscar por nombre o ingredientes..."
                     value={q}
                     onChange={(event) => updateParam('q', event.target.value)}
                 />
@@ -65,9 +65,9 @@ function Recipes() {
                     onChange={(event) => updateParam('cat', event.target.value)}
                 >
                     <option value="todas">Todas</option>
-                    <option value="desayuno">Desayuno</option>
-                    <option value="comida">Comida</option>
-                    <option value="cena">Cena</option>
+                    <option value="Desayuno">Desayuno</option>
+                    <option value="Almuerzo">Almuerzo</option>
+                    <option value="Cena">Cena</option>
                 </select>
             </div>
 

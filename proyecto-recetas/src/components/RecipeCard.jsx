@@ -4,26 +4,22 @@ import '../styles/recipe.css'
 function RecipeCard({ recipe, isFavorite = false }) {
     return (
         <article className="recipe-card">
-            <div className="recipe-card__content">
-                <div className="recipe-card__topline">
-                    <span className="recipe-card__category">{recipe.type}</span>
-                    {isFavorite && <span className="recipe-card__favorite">⭐ Favorito</span>}
+            <img src={recipe.image} alt={recipe.name} className="recipe-card__bg" />
+            <div className="recipe-card__overlay">
+                <div className="recipe-card__content">
+                    <div className="recipe-card__topline">
+                        <span className="recipe-card__category">{recipe.type}</span>
+                        {isFavorite && <span className="recipe-card__favorite">⭐ Favorito</span>}
+                    </div>
+
+                    <h2 className="recipe-card__title">{recipe.name}</h2>
+
                 </div>
 
-                <h2 className="recipe-card__title">{recipe.name}</h2>
-                <p className="recipe-card__description">{recipe.description}</p>
-
-                <p className="recipe-card__difficulty">Dificultad - {recipe.difficulty}</p>
-                <p className="recipe-card__time">{recipe.timeMinutes} de preparación</p>
-                <p className="recipe-card__ingredients">Ingredientes: {recipe.ingredients.join(', ')}</p>
-                <p className="recipe-card__cost">Coste: {recipe.estimatedCost} €</p>
-
-
+                <Link className="recipe-card__link" to={`/recipes/${recipe.id}`}>
+                    Ver detalle
+                </Link>
             </div>
-
-            <Link className="recipe-card__link" to={`/recipes/${recipe.id}`}>
-                Ver detalle
-            </Link>
         </article>
     )
 }
