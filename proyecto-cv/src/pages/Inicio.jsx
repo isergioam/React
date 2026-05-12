@@ -8,8 +8,8 @@ function Inicio() {
             </div>
 
             <p style={{ textAlign: 'center', lineHeight: '1.8' }}>
-                💻 <strong>Frontend Developer | Web Developer | WordPress Specialist | .NET Developer</strong><br/>
-                📍 Málaga, España<br/>
+                💻 <strong>Frontend Developer | Web Developer | WordPress Specialist | .NET Developer</strong><br />
+                📍 Málaga, España<br />
                 📫 <a href="mailto:isergioam@gmail.com" style={{ color: '#38bdf8' }}>isergioam@gmail.com</a>
             </p>
 
@@ -31,8 +31,8 @@ function Inicio() {
                 <table style={{ borderCollapse: 'separate', borderSpacing: 0, margin: '0 auto', textAlign: 'left' }}>
                     <thead>
                         <tr>
-                            <th style={{ borderRadius: '8px 0 0 8px', padding: '0.5rem 1rem', background: 'rgba(255,255,255,0.05)' }}>Categoría</th>
-                            <th style={{ borderRadius: '0 8px 8px 0', padding: '0.5rem 1rem', background: 'rgba(255,255,255,0.05)' }}>Experience with</th>
+                            <th style={{ padding: '0.5rem 1rem', background: 'rgba(255,255,255,0.05)' }}>Categoría</th>
+                            <th style={{ padding: '0.5rem 1rem', background: 'rgba(255,255,255,0.05)' }}>Experience with</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,6 +46,7 @@ function Inicio() {
                                 <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
                                 <img src="https://img.shields.io/badge/AngularJS-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="AngularJS" />
                                 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=Kotlin&logoColor=white" alt="Kotlin" />
+                                <img src="https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white" alt="Astro" />
                             </td>
                         </tr>
                         <tr>
@@ -55,6 +56,7 @@ function Inicio() {
                                 <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#" />
                                 <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET Framework" />
                                 <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+                                <img src="https://img.shields.io/badge/-Microsoft SharePoint-0078D4?style=for-the-badge&logo=microsoftsharepoint&logoColor=white" />
                             </td>
                         </tr>
                         <tr>

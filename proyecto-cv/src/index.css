@@ -264,3 +264,125 @@ code {
   color: var(--text);
   opacity: 0.8;
 }
+
+.cv-timeline__company {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 0.25rem;
+}
+
+.cv-timeline__description {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* =========================================
+   Componente: Formulario de Contacto
+   ========================================= */
+
+.contact-container {
+  max-width: 650px;
+  margin: 0 auto 3rem auto;
+  text-align: left;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Esquina de estilo cuadrado característico */
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  box-sizing: border-box;
+}
+
+.contact-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-h);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  font-family: var(--sans);
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  color: var(--text-h);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  outline: none;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  border-color: var(--accent);
+  background: var(--bg);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-form__button {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0;
+  box-shadow: 0 4px 12px var(--accent-bg);
+}
+
+.contact-form__button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--accent-border);
+}
+
+.contact-form__button:active {
+  transform: translateY(0);
+}
