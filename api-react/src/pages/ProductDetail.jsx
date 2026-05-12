@@ -1,25 +1,21 @@
 import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { getProductById } from '../services/productsApi.js'
 
-function ProductDetail() {
+export default function ProductDetail() {
     const { productId } = useParams()
-    const navigate = useNavigate()
-
-    const [item, setItem] = useState(null)
+    const [product, setProduct] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
 
     useEffect(() => {
-        async function load() {
+        async function loadProduct() {
             try {
                 setLoading(true)
                 setError('')
 
-                const r = await fetch(`https://dummyjson.com/products/${productId}`)
-                if (!r.ok) throw new Error('HTTP ' + r.status)
-
-                const data = await r.json()
-                setItem(data)
+                const productFromApi = await getProductById(productId)
+                setProduct(productFromApi)
             } catch (err) {
                 setError(err.message)
             } finally {
@@ -27,21 +23,25 @@ function ProductDetail() {
             }
         }
 
-        load()
+        loadProduct()
     }, [productId])
 
-    if (loading) return <p>Cargando detalle…</p>
+    if (loading) return <p>Cargando detalle...</p>
     if (error) return <p>Error: {error}</p>
+    if (!product) return <p>No se encontró el producto.</p>
 
     return (
-        <article>
-            <h2>{item.title}</h2>
-            <p>{item.description}</p>
-            <p>Precio: {item.price}</p>
-            <p>Categoría: {item.category}</p>
-            <button onClick={() => navigate(-1)}>← Volver</button>
+        <article className="product-detail">
+
+
+            <h2>{product.title}</h2>
+            <img src={product.thumbnail} alt={product.title} />
+            <p>{product.description}</p>
+            <p><strong>Precio:</strong> {product.price} €</p>
+            <p><strong>Categoría:</strong> {product.category}</p>
+            <p><strong>Marca:</strong> {product.brand}</p>
+
+            <Link to="/products">← Volver al listado</Link>
         </article>
     )
 }
-
-export default ProductDetail

@@ -1,22 +1,20 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import ProductCard from '../components/ProductCard.jsx'
+import { getProducts } from '../services/productsApi.js'
 
-function Products() {
-    const [items, setItems] = useState([])
+export default function Products() {
+    const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
 
     useEffect(() => {
-        async function load() {
+        async function loadProducts() {
             try {
                 setLoading(true)
                 setError('')
 
-                const r = await fetch('https://dummyjson.com/products')
-                if (!r.ok) throw new Error('HTTP ' + r.status)
-
-                const data = await r.json()
-                setItems(data.products)
+                const productsFromApi = await getProducts()
+                setProducts(productsFromApi)
             } catch (err) {
                 setError(err.message)
             } finally {
@@ -24,24 +22,24 @@ function Products() {
             }
         }
 
-        load()
+        loadProducts()
     }, [])
 
-    if (loading) return <p>Cargando productos…</p>
+    if (loading) return <p>Cargando productos...</p>
     if (error) return <p>Error: {error}</p>
 
     return (
-        <main>
+        <section>
             <h1>Productos</h1>
-            <ul>
-                {items.map(item => (
-                    <li key={item.id}>
-                        <Link to={`/products/${item.id}`}>{item.title}</Link>
-                    </li>
+            <p className="section-intro">
+                Listado de productos cargados desde una API pública externa.
+            </p>
+
+            <div className="products-grid">
+                {products.map(product => (
+                    <ProductCard key={product.id} product={product} />
                 ))}
-            </ul>
-        </main>
+            </div>
+        </section>
     )
 }
-
-export default Products
