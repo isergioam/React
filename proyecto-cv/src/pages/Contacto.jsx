@@ -75,7 +75,7 @@ function Contacto() {
                                 fontSize: '0.8rem', 
                                 fontFamily: 'var(--mono)', 
                                 color: 500 - form.descripcion.length <= 50 ? '#f87171' : 'var(--text)',
-                                background: 'rgba(255,255,255,0.05)',
+                                background: 'var(--social-bg)',
                                 padding: '0.1rem 0.4rem',
                                 border: '1px solid var(--border)'
                             }}>

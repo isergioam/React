@@ -17,9 +17,9 @@
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
-  color-scheme: light dark;
+  color-scheme: light;
   color: var(--text);
-  background: var(--bg);
+  background-color: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -31,7 +31,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     --text: #9ca3af;
     --text-h: #f3f4f6;
     --bg: #16171d;
@@ -43,6 +43,7 @@
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    color-scheme: dark;
   }
 
   #social .button-icon {
@@ -50,8 +51,31 @@
   }
 }
 
+:root[data-theme='dark'] {
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --bg: #16171d;
+  --border: #2e303a;
+  --code-bg: #1f2028;
+  --accent: #c084fc;
+  --accent-bg: rgba(192, 132, 252, 0.15);
+  --accent-border: rgba(192, 132, 252, 0.5);
+  --social-bg: rgba(47, 48, 58, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  color-scheme: dark;
+}
+
+html {
+  background-color: var(--bg);
+  transition: background-color 0.3s ease;
+}
+
 body {
   margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #root {
@@ -64,6 +88,8 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  background-color: var(--bg);
+  transition: background-color 0.3s ease;
 }
 
 h1,
@@ -180,7 +206,7 @@ code {
 .navbar__link.active {
   color: var(--text-h);
   border-color: var(--border);
-  background: rgba(255, 255, 255, 0.05); /* Acorde a la tabla de habilidades */
+  background: var(--social-bg);
 }
 
 /* Footer */
@@ -242,7 +268,7 @@ code {
   font-family: var(--mono);
   font-size: 0.85rem;
   color: var(--text-h);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--social-bg);
   border: 1px solid var(--border);
   padding: 0.25rem 0.75rem;
   margin-bottom: 1rem;
