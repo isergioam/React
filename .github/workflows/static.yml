@@ -1,0 +1,45 @@
+name: Deploy React Project
+
+on:
+  push:
+    branches: ["main"] # Cambia a "master" si es tu rama principal
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          # Importante: el cache busca el package-lock en la subcarpeta
+          cache-dependency-path: './proyecto-cv/package-lock.json'
+
+      - name: Install and Build
+        run: |
+          cd proyecto-cv
+          npm install
+          npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Aquí indicas la carpeta que se va a publicar. 
+          # Es la carpeta de salida DESPUÉS del build.
+          path: './proyecto-cv/dist' # Cambia 'dist' por 'build' si usas Create React App
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
