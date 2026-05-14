@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://isergioam.github.io/React/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "homepage": "https://isergioam.github.io/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
