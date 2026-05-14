@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "homepage": "https://isergioam.github.io/React/",
+    "homepage": "https://isergioam.github.io/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
