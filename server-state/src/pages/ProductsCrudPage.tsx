@@ -80,7 +80,7 @@ export default function ProductsCrudPage() {
             {createProductMutation.isSuccess ? <p>Producto creado correctamente.</p> : null}
 
             <ul>
-                {productsQuery.data.map((product) => (
+                {productsQuery.data?.map((product) => (
                     <li key={product.id}>
                         {product.title} · {product.price} €
 
