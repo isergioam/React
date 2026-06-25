@@ -1,7 +1,7 @@
 export type Product = {
     id: number
     title: string
-    price: number
+    //    price: number
 }
 
 type ProductsResponse = {
@@ -20,7 +20,8 @@ export type UpdateProductInput = {
 }
 
 export async function getProducts(): Promise<Product[]> {
-    const response = await fetch('https://dummyjson.com/products')
+    //const response = await fetch('https://dummyjson.com/products')
+    const response = await fetch('/api/products')
 
     if (!response.ok) {
         throw new Error('Error al cargar productos')
